@@ -20,16 +20,16 @@ public class CrowdTest {
     private DataSource dataSource;
     @Autowired
     private AdminMapper adminMapper;
-
+    //看到视频到26
     @Test
     public void testInsertAdmin(){
-       Admin admin = new Admin(null,"tom","123123","汤姆","tom@qq.com","源源");
-       adminMapper.insert(admin);
+       Admin admin = new Admin(null,"tom","88888888","汤姆","tom@qq.com","源源");
+       int countil=adminMapper.insert(admin);
+       System.out.println("受影响的行数="+countil);
     }
     @Test
     public void testConnection() throws SQLException {
             Connection connection = dataSource.getConnection();
             System.out.println(connection);
-
     }
 }
